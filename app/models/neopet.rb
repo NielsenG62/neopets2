@@ -1,5 +1,5 @@
 class Neopet < ApplicationRecord
-  require 'rufus-scheduler'
+  # require 'rufus-scheduler'
   belongs_to :user
   before_save(:define_stats, :get_img, :feed)
   validates :pet_name, presence: true
@@ -15,38 +15,32 @@ class Neopet < ApplicationRecord
   end
 
   def get_img
-    self.pet_pic = "/app/assets/images/neopets/#{rand(1..11)}.gif"
+    self.pet_pic = "neopets/#{rand(1..11)}.png"
   end
 
   def feed 
-    scheduler = Rufus::Scheduler.new
     if self.pet_hungry == false
       p "You put out the food, but it's not hungry yet"
-      self.waiting_to_feed? = true
+      self.waiting_to_feed = true
     else
       self.eat
+    end
+  end
+
+  def eat
+    scheduler = Rufus::Scheduler.new
+    p "nom nom nom"
+    self.pet_hungry = false
+    self.current_hp_stat = self.hp_stat
+    self.pet_pic = "neopets/#{self.pet_pic.delete("^0-9")}.png"
+    scheduler.in '10s', overlap: false do
+      p "feed me daddy"                                     
+      self.pet_pic = "neopets_sad/#{self.pet_pic.delete("^0-9")}.png"
+      if self.waiting_to_feed == true
+        self.waiting_to_feed = false
+        self.eat
       end
     end
   end
-
-  def waiting_to_feed?
-    if self.pet_hungry == false
-      return true 
-    else
-      self.eat
-    end
-  end
 end
 
-def eat
-  p "nom nom nom"
-      self.pet_hungry = false
-      self.current_hp_stat = self.hp_stat
-      self.pet_pic = "/app/assets/images/neopets/#{self.pet_pic.delete("^0-9")}.gif"
-      scheduler.in '10s', overlap: false do
-        p "feed me daddy"                                     
-        self.pet_pic = "/app/assets/images/neopets_sad/#{self.pet_pic.delete("^0-9")}.gif"
-        if self.waiting_to_feed?
-          self.eat
-        end
-end

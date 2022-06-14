@@ -10,7 +10,8 @@ class NeopetsController < ApplicationController
     render :new
   end
 
-  def create @neopet = Neopet.new(neopet_params)
+  def create 
+    @neopet = Neopet.new(neopet_params)
     if @neopet.save
       flash[:notice] = "Your new neopet is below"
       redirect_to neopets_path
@@ -28,7 +29,7 @@ class NeopetsController < ApplicationController
   def destroy
     @neopet = Neopet.find(params[:id])
     @neopet.destroy
-    flash[:notice] = "Neopet was released to the farm :(."
+    flash[:notice] = "Neopet was released to the farm :("
     redirect_to neopets_path
   end
 

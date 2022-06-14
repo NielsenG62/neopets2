@@ -28,46 +28,64 @@
   top: 0px;
   background-image: url(https://play.nintendo.com/images/theme-pattern-animalcrossing-blue.d872ef06.jpg);
   box-shadow: 0px -2px 20px 10px rgb(0 0 0 / 20%);
+  border-bottom:  solid black;
+  border-color: black;
+  border-width: 3px;
+  box-shadow: 5px 5px rgba(0,0,0,.15);
 }
 
 .home {
   text-align: center;
-  color: rgb(57, 69, 244);
-  /* font-weight: bold; */
+  color: rgb(67, 208, 255);
   font-family: 'Luckiest Guy', cursive;
-
   -webkit-text-stroke:1px rgb(255, 128, 24);
-  text-shadow: 2px 0 black, -2px 0 black, 0 2px black, 0 -2px black, 1px 1px black, -1px -1px black, -1px 1px black, 1px -1px black;
-  transition: all 3s;
+  transition: all 2s;
+  text-shadow: 5px 5px rgba(0,0,0,.25);
 }
 
 .home:hover {
   transition: all 5s;
   transform: scale(1.3);
   -webkit-text-stroke: 1px rgb(214, 255, 91);
+
+}
+
+#box-qm:hover {
+  transition: all 1s;
+  transform: scale(1.1);
+  filter: none;
 }
 
 #pet1 {
-  height: 420px;
-  width: 420px;
+  height: 400px;
+  width: 400px;
   display: absolute;
   margin-left: auto;
   margin-right: auto;
   transition: all 3s;
- 
+}
+
+#box-qm {
+  height: 400px;
+  width: 400px;
+  display: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 12s;
+  filter: sepia() drop-shadow(11px 11px 14px rgb(1, 1, 1));
 }
 
 #pet2  {
-  height: 420px;
-  width: 420px;
+  height: 400px;
+  width: 400px;
   display: absolute;
   margin-left: auto;
   margin-right: auto;
   transition: all 3s;
 }
 #pet3  {
-  height: 420px;
-  width: 420px;
+  height: 400px;
+  width: 400px;
   display: absolute;
   margin-left: auto;
   margin-right: auto;
@@ -99,11 +117,18 @@
 }
 
 .container {
-  border:2mm ridge rgba(50, 186, 220, 0.6);
-  /* border-radius: 100%; */
+  text-align: center;
+  /* border:2mm ridge rgba(50, 186, 220, 0.6); */
   height: 400px;
   width: 200%;
   background-image: url(https://play.nintendo.com/images/theme-pattern-animalcrossing-blue.d872ef06.jpg);
+  border: solid black;
+  border-color: black;
+  border-width: 3px 3px 5px 5px;
+  border-radius:4% 95% 6% 95%/95% 4% 92% 5%;
+  transform: rotate(-.5deg);
+  box-shadow: 20px 20px rgba(0,0,0,.15);
+
 }
 
 .field, .sign {
@@ -111,17 +136,41 @@
 }
 
 .frame-bg {
+  /* animation: pulse 30s linear infinite; */
   text-align: center;
   background-image: url("https://png2.cleanpng.com/sh/40a6703fe85ea75e38a78269d39f1625/L0KzQYm3U8A2N5l3fZH0aYP2gLBuTfNwdZpoRdR4b3uwc7F0ifN0NaF0iJ9qcoSweb3zlgN1epJ5gdH3LXX7gL32kBlwdl5xgdlxdH7sfri0kPF1fJZ3hp8AYUnnQIS9WMBnaWc3UZCBMUe2QYe3V8E2OmE3S6s9NkSzRoW4TwBvbz==/kisspng-comic-book-comics-pop-art-illustration-explosion-lightning-pattern-5a9d03680fa629.6173160715202394640641.png");
   background-position: center;
   background-repeat:no-repeat; 
-  background-size: 250px, 250px;
+  background-size: 420px, 420px;
+  /* filter:sepia(); */
 }
-
-/* .navbar {
-  position: sticky;
+/* @-webkit-keyframes "pulse" {
+  0% {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+  }
+  50% {
+     -webkit-transform: scale(0.8);
+     transform: scale(0.8);
+  }
+  100% {
+      -webkit-transform: scale(1);
+     transform: scale(1);
+  }
 } */
 
+
 .form {
-  margin-left: 20px;
+  margin-left: 40px;
+  line-height: 2;
+  -webkit-text-stroke: 0.7px rgb(255, 255, 255);
+  letter-spacing: 3px;
+}
+
+.btn {
+  border: solid black;
+}
+
+.btn:hover {
+  transform: scale(1.1);
 }

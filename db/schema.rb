@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_13_182002) do
+ActiveRecord::Schema.define(version: 2022_06_13_234440) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 2022_06_13_182002) do
     t.string "pet_pic"
     t.integer "user_id"
     t.integer "current_hp_stat"
+    t.boolean "waiting_to_feed", default: false
   end
 
   create_table "users", force: :cascade do |t|
