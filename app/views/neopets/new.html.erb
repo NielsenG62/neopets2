@@ -5,7 +5,9 @@
     <%= f.label :user_id, style: 'display:none' %>
     <%= f.number_field :user_id, value: current_user.id, style: 'display:none' %>  
     <%= f.label :pet_name %>
+    <div class ="pet-form-text">
     <%= f.text_field :pet_name %>
+    </div>
     <%= f.submit %>
   <% end %>
 </div>

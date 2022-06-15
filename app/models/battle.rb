@@ -1,9 +1,10 @@
 module Battle
   def fight
     if rand(1..100) > 50
-      return "you win"
+  
+      return "win"
     else 
-      return "you lose"
+      return "lose"
     end
   end
 end

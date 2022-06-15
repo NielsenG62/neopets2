@@ -1,19 +1,20 @@
 class BattlesController < ApplicationController
 
   def index
-    @neopets = Neopet.all
+    @neopet = Neopet.find(params[:neopet_id])
     render :show
   end
 
   def show
-    @neopet = Neopet.find(params[:id])
+    @neopet = Neopet.find(params[:neopet_id])
     render :show
   end
 
-  def battle
+  def fight
     @neopet = Neopet.find(params[:neopet_id])
-    @neopet.fight
-    render :battle
+    @fight_results = @neopet.fight
+    @fight_results
+    render :show
   end
 
 

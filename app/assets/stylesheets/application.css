@@ -80,13 +80,34 @@
 
 #headstone  {
   margin-top: 40px;
-  height: 300px;
+  height: 280px;
   width:300px;
   display: absolute;
   margin-left: auto;
   margin-right: auto;
   transition: all 3s;
+  border-bottom:  solid black;
+  border-color: black;
+  border-width: 10px;
 }
+#pet-battle  {
+  height: 400px;
+  width: 400px;
+  display: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 3s;
+}
+.battle-bg {
+  text-align: center;
+  background-image: url("https://png2.cleanpng.com/sh/5aa61620cf643f69d96756b8473579d4/L0KzQYm3VcI1N5D6ipH0aYP2gLBuTfNwfZ95feQ2c4T1ebzsTgNwfaNofZ9rYYT3fLbtifVtbF45RdV4dX73dcO0kCRzcZwye9HAboTogn77hgJzd6Nui982NXKzRrTshsI4bGk4Uas3OEG4QYm8UMMyPWM8Sak7OEWzRYK7Ub5xdpg=/kisspng-counter-strike-source-battlefield-4-counter-strik-counter-terrorism-5b06cef27d8399.8151850315271728505141.png");
+  background-position: center;
+  background-repeat:no-repeat; 
+  background-size: 420px, 420px;
+}
+
+
+
 
 #pet2  {
   height: 400px;
@@ -153,6 +174,12 @@
   background-image: url(https://cdn.wallpapersafari.com/98/44/l25orQ.png);
 }
 
+
+#death-page{
+  background-image: url(https://www.jellyneo.net/images/plotimgs/forgotten_graveyard_sword.png);
+  background-size: cover;
+}
+
 #enemy {
   height: 400px;
   width: 400px;
@@ -204,6 +231,7 @@
   background-repeat:no-repeat; 
   background-size: 320px, 320px;
 }
+
 
 .stats-bg {
 text-align: center;
@@ -284,11 +312,6 @@ font-size: large;
   box-shadow: 20px 20px rgba(0,0,0,.15);
 }
 
-.pet-form textarea {
-  background-color: aqua;
-  /* background-image: url(https://play.nintendo.com/images/theme-pattern-animalcrossing-green.d872ef06.jpg); */
-}
-
 .error {
   margin-top: 23px;
   color: rgb(247, 160, 160);
@@ -296,6 +319,9 @@ font-size: large;
   text-align: center;
 }
 
-/* .navbar {
-  position: sticky;
-} */
+.battle-info {
+  color: black;
+  -webkit-text-stroke: 1px white;
+  letter-spacing: 3px;
+  font-size: 32px;
+}

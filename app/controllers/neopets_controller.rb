@@ -36,10 +36,10 @@ class NeopetsController < ApplicationController
     redirect_to neopet_path(params[:neopet_id])
   end
 
-  def battle
+  def fight
     @neopet = Neopet.find(params[:neopet_id])
     @neopet.fight
-    render :battle
+    render :show
   end
 
   def destroy

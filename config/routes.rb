@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   devise_for :users
   resources :neopets do
     post'/feed' => 'neopets#feed'
-  end
-  resources :battles do
+    resources :battles
     post'/fight' => 'battles#fight'
   end
+  # resources :battles
 end

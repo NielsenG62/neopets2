@@ -7,16 +7,7 @@ class Neopet < ApplicationRecord
     self.define_stats
     self.get_img
   end
-  after_create do
-    @scheduler = Rufus::Scheduler.new
-    @job =
-      @scheduler.every '10s' do 
-        new_health = self.current_hp_stat -= 1
-        self.update_attributes(current_hp_stat: new_health)
-        self.shutdown
-      end
-  end
-
+  after_create(:hp_drain)
   validates :pet_name, presence: true
   validates :pet_name, length: { in:3..20 }
   
@@ -35,5 +26,16 @@ class Neopet < ApplicationRecord
   def shutdown
     @scheduler.unschedule(@job) if self.current_hp_stat <= 0
   end
+
+  def hp_drain
+    neopet = Neopet.find(self.id)
+      @scheduler = Rufus::Scheduler.new
+      @job =
+      @scheduler.every '10s' do 
+        new_health = neopet.current_hp_stat -= 1
+        neopet.update_attributes(current_hp_stat: new_health)
+        neopet.shutdown
+      end
+    end
 end
 
