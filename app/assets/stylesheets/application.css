@@ -66,13 +66,15 @@
 }
 
 #box-qm {
+  
   height: 400px;
   width: 400px;
   display: absolute;
   margin-left: auto;
   margin-right: auto;
-  transition: all 12s;
+  transition: all 3s;
   filter: sepia() drop-shadow(11px 11px 14px rgb(1, 1, 1));
+  
 }
 
 #pet2  {
@@ -118,17 +120,37 @@
 
 .container {
   text-align: center;
-  /* border:2mm ridge rgba(50, 186, 220, 0.6); */
   height: 400px;
   width: 200%;
-  background-image: url(https://play.nintendo.com/images/theme-pattern-animalcrossing-blue.d872ef06.jpg);
   border: solid black;
   border-color: black;
   border-width: 3px 3px 5px 5px;
   border-radius:4% 95% 6% 95%/95% 4% 92% 5%;
   transform: rotate(-.5deg);
   box-shadow: 20px 20px rgba(0,0,0,.15);
+}
 
+#home-page{
+  background-image: url(https://play.nintendo.com/images/theme-pattern-animalcrossing-blue.d872ef06.jpg);
+}
+
+#pet-page{
+  background-image: url(https://i.imgur.com/B8fJ5ua.jpeg);
+}
+
+
+
+.container2 {
+  text-align: center;
+  height: 400px;
+  width: 200%;
+  background-image: url(https://png2.cleanpng.com/sh/9e7abb5d4b9c25ed974d44627efc6d8a/L0KzQYm4UsI6N5Dwg5H0aYP2gLBuTgJicZ9rhARuc4SwgLF5lPFjdJYyhtd9d3B1e37ukvFxcJpoi59ybXHqdX7ojvluaaVuReRqaX7pf8PskCQueJ9sReZ7YX72gLL5hf51NZpyedlucz3zebT7lgJme151gNH9bz24c4OAhskzOpM2TKZtNT66SYG6V8Y0PGI6TKg6MkO4RYWAUsYyNqFzf3==/kisspng-rainforest-portable-network-graphics-image-animati-rainforest-png-transparent-images-pictures-photo-5c27f922b144d5.7903763415461235547261.png);
+  border: solid black;
+  border-color: black;
+  border-width: 3px 3px 5px 5px;
+  border-radius:4% 95% 6% 95%/95% 4% 92% 5%;
+  transform: rotate(-.5deg);
+  box-shadow: 20px 20px rgba(0,0,0,.15);
 }
 
 .field, .sign {
@@ -136,29 +158,34 @@
 }
 
 .frame-bg {
-  /* animation: pulse 30s linear infinite; */
   text-align: center;
-  background-image: url("https://png2.cleanpng.com/sh/40a6703fe85ea75e38a78269d39f1625/L0KzQYm3U8A2N5l3fZH0aYP2gLBuTfNwdZpoRdR4b3uwc7F0ifN0NaF0iJ9qcoSweb3zlgN1epJ5gdH3LXX7gL32kBlwdl5xgdlxdH7sfri0kPF1fJZ3hp8AYUnnQIS9WMBnaWc3UZCBMUe2QYe3V8E2OmE3S6s9NkSzRoW4TwBvbz==/kisspng-comic-book-comics-pop-art-illustration-explosion-lightning-pattern-5a9d03680fa629.6173160715202394640641.png");
+  background-image: url("https://png2.cleanpng.com/sh/faff342ab89e9daa32b7cef9dddd82d8/L0KzQYm3U8MxN5R6iZH0aYP2gLBuTgNxbZZogJ9rYXzvf7F1TfNwdZpoRdR4b3uwc7F0ifN0NZR0hdtsLYP3grr3TfJwd54yTdNrZHS0SbK5gvUzQWkzSKQCMkK7QYW4VcIzO2kATKI7MUe8SHB3jvc=/kisspng-speech-balloon-comic-book-comics-comic-strip-boom-5abdd19a2be298.0272281415223894021798.png");
   background-position: center;
   background-repeat:no-repeat; 
-  background-size: 420px, 420px;
-  /* filter:sepia(); */
+  background-size: 360px, 360px;
 }
-/* @-webkit-keyframes "pulse" {
-  0% {
-      -webkit-transform: scale(1.1);
-      transform: scale(1.1);
-  }
-  50% {
-     -webkit-transform: scale(0.8);
-     transform: scale(0.8);
-  }
-  100% {
-      -webkit-transform: scale(1);
-     transform: scale(1);
-  }
-} */
 
+.tree-bg {
+  text-align: center;
+  background-image: url("https://png2.cleanpng.com/sh/d8217595bcc0cea3237e1ba41088201f/L0KzQYm3V8AzN5xufpH0aYP2gLBuTfdtaZVqReZ7ZXWwc7FzjPFobV5ohNt5LXH1hH68gsNiO2Y3fqJtM0W5SXABUcQ2OGc3SKMAM0C4RIK6VckxPWU2RuJ3Zx==/kisspng-glade-tree-collage-clip-art-5b3a352f0d3569.8145062015305413590541.png");
+  background-position: center;
+  background-repeat:no-repeat; 
+  background-size: 320px, 320px;
+}
+
+.stats-bg {
+text-align: center;
+background-image: url("https://png2.cleanpng.com/sh/bba82c698b1646b1aef6eca07f2d1162/L0KzQYi4UcI5N5I2epGAYUHnQbe4gcJlPmhnUZC8NkG7R4a8VsE2OWI9TakENEa0SIe1kP5o/5a1d1f1a2d67b9.361875561511857946186.png");
+font-family: 'Seaweed Script', cursive;
+text: bold;
+background-position: center;
+background-repeat:no-repeat; 
+background-size: 300px, 300px;
+color: rgb(0, 0, 0);
+letter-spacing: 6px;
+text-shadow: none;
+font-size: large;
+}
 
 .form {
   margin-left: 40px;
@@ -174,3 +201,69 @@
 .btn:hover {
   transform: scale(1.1);
 }
+.full{
+  font-size: 60px;
+  color: green;
+  list-style-type: none;
+}
+.hungry{
+  list-style-type: none;
+  font-size: 60px;
+  color: red;
+}
+.col-hunger{
+  color: rgb(255, 255, 255);
+  font-size: xx-large;
+  margin: auto;
+  width: 100%;
+  padding: 120px;
+  list-style-type: none;
+}
+
+.pulsate {
+  -webkit-animation: pulsate 3s ease-out;
+  -webkit-animation-iteration-count: infinite; 
+  opacity: 0.5;
+}
+@-webkit-keyframes pulsate {
+  0% { 
+      opacity: 0.5;
+  }
+  50% { 
+      opacity: 1.0;
+  }
+  100% { 
+      opacity: 0.5;
+  }
+}
+
+.pet-form {
+  font-size: 70px;
+  color: rgb(55, 245, 255);
+  background-image : url(https://play.nintendo.com/images/theme-pattern-animalcrossing-green.d872ef06.jpg);
+  text-align: center;
+  height: 400px;
+  width: 100%;
+  border: solid black;
+  border-color: black;
+  border-width: 3px 3px 5px 5px;
+  border-radius:4% 95% 6% 95%/95% 4% 92% 5%;
+  transform: rotate(-.5deg);
+  box-shadow: 20px 20px rgba(0,0,0,.15);
+}
+
+.pet-form textarea {
+  background-color: aqua;
+  /* background-image: url(https://play.nintendo.com/images/theme-pattern-animalcrossing-green.d872ef06.jpg); */
+}
+
+.error {
+  margin-top: 23px;
+  color: rgb(247, 160, 160);
+  font-size: 45px;
+  text-align: center;
+}
+
+/* .navbar {
+  position: sticky;
+} */

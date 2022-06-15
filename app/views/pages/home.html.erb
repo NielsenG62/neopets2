@@ -2,7 +2,7 @@
 
 <h1 class='home'>NEO F#@*NG PETS!! ya B&$CH!</h1>
 <br>
-<div class="container">
+<div id="home-page" class="container">
   <div class="row" id="top">
     <div class="col-4">
       <% if current_user && current_user.neopets[0] %>
@@ -12,7 +12,7 @@
       </div>
       <% else %>
         <img id="box-qm" class="overlay-img" src='https://png2.cleanpng.com/sh/fae3b0d0092d67fb540f481e65446bf4/L0KzQYm3U8I3N6p9iZH0aYP2gLBuTgF2baR5gdH3LX3kgry0hPlkbV51itd8ZX73ccXwjB4uaZ9uhdN9aXBxPbTzigAuaaN5ReNAZYP3ebF1TcViamlmUNUDOHO1SIWCTsI4Omk6T6oAMUW1QoG8UcI4OmY8TKM3cH7q/kisspng-question-mark-dice-presentation-animation-clip-art-question-5ab8a8c88c2849.2728578515220512725741.png'>
-        <button type="button" id= "pet-add"  class="btn btn-light">Add a pet</button>   
+        <%= button_to "Add a pet", new_neopet_path(current_user), id: "pet-add", class: "btn btn-light", method: 'get' %>  
       <% end %>  
     </div>
 
@@ -20,12 +20,12 @@
       <% if current_user && current_user.neopets[1] %>
       <div class="frame-bg">
         <%= image_tag "#{current_user.neopets[1].pet_pic}", id: 'pet1', class: 'overlay-img' %>
-        <button type="button" class="btn btn-light"><%= current_user.neopets[1].pet_name %></button> 
+        <%= button_to current_user.neopets[1].pet_name,  neopet_path(current_user.neopets[1].id), type: "button", class: "btn btn-light", :method => 'get'%>
       </div>         
       <% else%>
         <div class="box">
           <img id="box-qm" class="overlay-img" src='https://png2.cleanpng.com/sh/fae3b0d0092d67fb540f481e65446bf4/L0KzQYm3U8I3N6p9iZH0aYP2gLBuTgF2baR5gdH3LX3kgry0hPlkbV51itd8ZX73ccXwjB4uaZ9uhdN9aXBxPbTzigAuaaN5ReNAZYP3ebF1TcViamlmUNUDOHO1SIWCTsI4Omk6T6oAMUW1QoG8UcI4OmY8TKM3cH7q/kisspng-question-mark-dice-presentation-animation-clip-art-question-5ab8a8c88c2849.2728578515220512725741.png'>
-          <button type="button" id= "pet-add" class="btn btn-light">Add a pet</button> 
+          <%= button_to "Add a pet", new_neopet_path(current_user), id: "pet-add", class: "btn btn-light", method: 'get' %>
         </div>
       <% end %>
     </div>
@@ -34,29 +34,12 @@
       <% if current_user && current_user.neopets[2] %>
         <div class="frame-bg">
           <%= image_tag "#{current_user.neopets[2].pet_pic}", id: 'pet1', class: 'overlay-img' %>
-          <button type="button"   class="btn btn-light"><%= current_user.neopets[2].pet_name %></button>   
+          <%= button_to current_user.neopets[2].pet_name,  neopet_path(current_user.neopets[2].id), type: "button", class: "btn btn-light", :method => 'get'%>  
         </div>      
       <% else%>
         <img id="box-qm" class="overlay-img" src='https://png2.cleanpng.com/sh/fae3b0d0092d67fb540f481e65446bf4/L0KzQYm3U8I3N6p9iZH0aYP2gLBuTgF2baR5gdH3LX3kgry0hPlkbV51itd8ZX73ccXwjB4uaZ9uhdN9aXBxPbTzigAuaaN5ReNAZYP3ebF1TcViamlmUNUDOHO1SIWCTsI4Omk6T6oAMUW1QoG8UcI4OmY8TKM3cH7q/kisspng-question-mark-dice-presentation-animation-clip-art-question-5ab8a8c88c2849.2728578515220512725741.png'>
-        <button type="button" id= "pet-add" class="btn btn-light">Add a pet</button>
+        <%= button_to "Add a pet", new_neopet_path(current_user), id: "pet-add", class: "btn btn-light", method: 'get' %>
       <% end %>
     </div>
   </div>
 </div>
-<%# <br> %>
-
-<%# <div class="container">
-  <div class="row" id="top">
-    <div class="col-4">
-      <img id="pet1" src='https://png2.cleanpng.com/sh/f38c8834b27b9d9b9a1e6d45b69e1ee0/L0KzQYm3VsE1N6tqgJH0aYP2gLBuTf5md6FqjOU2d3nueX71hf9xbaV4RdhqZYLsdcS0VfIzOpU6fNY9NUO1doO1UskzPGc7Uac6NUK8QIGCVsI6Omk4TZD5bne=/kisspng-neopets-wiki-neopets-faeries-5b22d5dd4532f2.2924669515290096292835.png'>
-    </div>
-
-    <div class="col-4">
-      <img id="pet2" src='https://png2.cleanpng.com/sh/f38c8834b27b9d9b9a1e6d45b69e1ee0/L0KzQYm3VsE1N6tqgJH0aYP2gLBuTf5md6FqjOU2d3nueX71hf9xbaV4RdhqZYLsdcS0VfIzOpU6fNY9NUO1doO1UskzPGc7Uac6NUK8QIGCVsI6Omk4TZD5bne=/kisspng-neopets-wiki-neopets-faeries-5b22d5dd4532f2.2924669515290096292835.png'>
-    </div>
-
-    <div class="col-4">
-      <img id="pet3" src='https://png2.cleanpng.com/sh/f38c8834b27b9d9b9a1e6d45b69e1ee0/L0KzQYm3VsE1N6tqgJH0aYP2gLBuTf5md6FqjOU2d3nueX71hf9xbaV4RdhqZYLsdcS0VfIzOpU6fNY9NUO1doO1UskzPGc7Uac6NUK8QIGCVsI6Omk4TZD5bne=/kisspng-neopets-wiki-neopets-faeries-5b22d5dd4532f2.2924669515290096292835.png'>
-    </div>
-  </div>
-</div> %>

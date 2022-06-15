@@ -1,8 +1,9 @@
 class NeopetsController < ApplicationController
+  before_action :authenticate_user!, except: [:index]
 
   def index
     @neopets = Neopet.all
-    render :index
+    redirect_to root_path
   end
 
   def new
@@ -23,18 +24,28 @@ class NeopetsController < ApplicationController
 
   def show
     @neopet = Neopet.find(params[:id])
-     render :show
+    render :show
+  end
+
+  def feed
+    @neopet = Neopet.find(params[:neopet_id])
+    @neopet.feed
+    # @neopet.update!(pet_hungry: @neopet.pet_hungry,
+    #                 pet_pic: @neopet.pet_pic,
+    #                 waiting_to_feed: @neopet.waiting_to_feed)
+    # # binding.pry
+    render :show
   end
 
   def destroy
     @neopet = Neopet.find(params[:id])
     @neopet.destroy
-    flash[:notice] = "Neopet was released to the farm :("
+    flash[:notice] = "Your Neopet was 'released' to the farm :("
     redirect_to neopets_path
   end
 
   private
   def neopet_params
-    params.require(:neopet).permit(:name)
+    params.require(:neopet).permit(:pet_name, :user_id)
   end
 end

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   root to: 'pages#home'
   devise_for :users
-  resources :neopets
+  resources :neopets do
+    post'/feed' => 'neopets#feed'
+  end
 end

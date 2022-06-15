@@ -1,5 +1,57 @@
-<p>show neopet path test</p>>
-<p><%= {current_user.neopets[params[:id]].pet_pic} %>
 
+<br>
+<br>
+<br>
+<br>
+<div id="pet-page" class="container">
+  <div class="row" id="top">
+    <div class="col-4">
+      <% if current_user && @neopet %>
+        <div class="tree-bg">
+          <%= image_tag "#{@neopet.pet_pic}", id: 'pet1', class: 'overlay-img' %>
+        
+        </div>
+      <% else %>
+        <img id="box-qm" class="overlay-img" src='https://png2.cleanpng.com/sh/fae3b0d0092d67fb540f481e65446bf4/L0KzQYm3U8I3N6p9iZH0aYP2gLBuTgF2baR5gdH3LX3kgry0hPlkbV51itd8ZX73ccXwjB4uaZ9uhdN9aXBxPbTzigAuaaN5ReNAZYP3ebF1TcViamlmUNUDOHO1SIWCTsI4Omk6T6oAMUW1QoG8UcI4OmY8TKM3cH7q/kisspng-question-mark-dice-presentation-animation-clip-art-question-5ab8a8c88c2849.2728578515220512725741.png'>
+        <button type="button" id= "pet-add"  class="btn btn-light">Add a pet</button>   
+      <% end %> 
+    </div>
 
+    <div class="col-4">
+      <div class="stats-bg">
+        <%# <p><%= "#{@neopet.pet_name}" %></p>
+       
+        
+        <ul style="list-style-type:none">
+          <br>
+          <br>
+          <br>
+          <li>Attack - <%= "#{@neopet.att_stat}" %></li>
+          <br>
+          <li>Defense - <%= "#{@neopet.def_stat}" %></li>
+          <br>
+          <li>Speed - <%= "#{@neopet.spd_stat}" %></li>
+          <br>
+          <li>Health - <%= "#{@neopet.hp_stat}" %></li>
+          <br>
+          <br>
+          <br>
+          <%= button_to "send #{@neopet.pet_name} to the farm", neopet_path(@neopet), class: 'btn btn-light', :method => 'delete' %>
+   
+      </div>
+    </div>
 
+    <div class="col-4">
+      <div class="col-hunger">
+        <ul>
+        <% if @neopet.pet_hungry %>
+          <li><%= "#{@neopet.pet_name} is "%><span class="pulsate"><span class="hungry"> hungry </li>
+        <% else %>
+          <li><%= "#{@neopet.pet_name} is "%><span class="full"> full</span></li>
+        <% end %>
+        </ul>
+        <%= button_to "Feed #{@neopet.pet_name}", neopet_feed_path(@neopet.id), class: 'btn btn-light', method: 'post'%>
+      </div>
+    </div>
+  </div>
+</div>

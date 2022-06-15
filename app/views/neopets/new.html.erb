@@ -1,1 +1,11 @@
-<p>new pet path test</p>
+
+<div class ="pet-form">
+
+  <%= form_for @neopet do |f| %>
+    <%= f.label :user_id, style: 'display:none' %>
+    <%= f.number_field :user_id, value: current_user.id, style: 'display:none' %>  
+    <%= f.label :pet_name %>
+    <%= f.text_field :pet_name %>
+    <%= f.submit %>
+  <% end %>
+</div>
