@@ -1,0 +1,25 @@
+<div id="battle-page" class="container">
+  <div class="row" id="top">
+    <div class="col-4">
+    
+      <% if current_user && @neopet && @neopet.hp_stat > 1%>
+        <div class="tree-bg">
+          <%= image_tag "#{@neopet.pet_pic}", id: 'pet1', class: 'overlay-img' %>
+        </div>
+      <% else %>
+        <img id="headstone" class="overlay-img" src='https://png2.cleanpng.com/sh/f8d41d89ba643d11df0fe3419e512393/L0KzQYm3U8I5N5D7j5H0aYP2gLBuTfdzaadqRdVqcoTyf7A0hQJif5pzf59xZXHng8X2jvUua5ZyfeZucomwRbLpg8A4aWM3UacANkSxSYi9WMM2P2k2TaQ7Mke1QYe5UcY6O191htk=/kisspng-grave-cartoon-drawing-headstone-cemetery-5abc07a2295564.9768357815222721621693.png'>
+       <%= button_to "#{@neopet.pet_name} has died", neopet_path(@neopet), class: 'btn btn-light', :method => 'delete' %>
+      <% end %> 
+    </div>
+
+    <div class="col-4">
+         <%= button_to "have #{@neopet.pet_name} fight the terrorist",   battle_path(@neopet), type: "button", class: "btn btn-light", :method => 'get'%>
+    </div>
+
+    <div class="col-4">
+      <img id= "enemy" src= "https://png2.cleanpng.com/sh/217cf98db94c176389371324b097362b/L0KzQYm3VMI1N5x7iZH0aYP2gLBuTfl0dJJygdU2dHX1grF5igNuNaRqiOZubXLogn64Ub1ifKVme918LYTogsP2kr02aZVqfqlrN3K4Q4fsVr43P2o9SacEMkG4QoW8VsE5PGg8TKQ8LoDxd1==/kisspng-islamic-terrorism-september-11-attacks-terror-5adef7b7b536e6.6798159215245618477423.png">
+    
+      <img id= "game-over" src= "https://png2.cleanpng.com/sh/84f3d4ef65bf7c42121722dc486cbb14/L0KzQYm3U8IxN5t0iZH0aYP2gLBuTgdifJZ3e9H1b4KwgLLwjwRqdpgyhARqbnfoPbPolQRtbV51eeR0LYDkebB7gvFtdF50itN3Z3Wwg8HzggQueJ9sRdt2YXfoPYbogsFiPGM5S6o6YkO7PoeAVMQ6Omk4Sac7MUW8QYS6UsIzQWkziNDw/kisspng-watercolor-painting-orange-battle-park-paintball-orange-splat-png-image-5ab1a424381b38.6744928315215913322298.png">
+    </div>
+  </div>
+</div>

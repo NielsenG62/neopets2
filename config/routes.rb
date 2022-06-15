@@ -4,4 +4,7 @@ Rails.application.routes.draw do
   resources :neopets do
     post'/feed' => 'neopets#feed'
   end
+  resources :battles do
+    post'/fight' => 'battles#fight'
+  end
 end

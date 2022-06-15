@@ -69,12 +69,23 @@
   
   height: 400px;
   width: 400px;
-  display: absolute;
+  /* display: absolute; */
+
   margin-left: auto;
   margin-right: auto;
   transition: all 3s;
   filter: sepia() drop-shadow(11px 11px 14px rgb(1, 1, 1));
   
+}
+
+#headstone  {
+  margin-top: 40px;
+  height: 300px;
+  width:300px;
+  display: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 3s;
 }
 
 #pet2  {
@@ -138,6 +149,27 @@
   background-image: url(https://i.imgur.com/B8fJ5ua.jpeg);
 }
 
+#battle-page{
+  background-image: url(https://cdn.wallpapersafari.com/98/44/l25orQ.png);
+}
+
+#enemy {
+  height: 400px;
+  width: 400px;
+  display: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  transform: rotateY(180deg);
+}
+
+#widow {
+  height: 400px;
+  width: 400px;
+  display: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  transform: rotateY(180deg);
+}
 
 
 .container2 {
@@ -177,7 +209,7 @@
 text-align: center;
 background-image: url("https://png2.cleanpng.com/sh/bba82c698b1646b1aef6eca07f2d1162/L0KzQYi4UcI5N5I2epGAYUHnQbe4gcJlPmhnUZC8NkG7R4a8VsE2OWI9TakENEa0SIe1kP5o/5a1d1f1a2d67b9.361875561511857946186.png");
 font-family: 'Seaweed Script', cursive;
-text: bold;
+font-weight: bold ;
 background-position: center;
 background-repeat:no-repeat; 
 background-size: 300px, 300px;

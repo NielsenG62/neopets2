@@ -30,11 +30,16 @@ class NeopetsController < ApplicationController
   def feed
     @neopet = Neopet.find(params[:neopet_id])
     @neopet.feed
-    # @neopet.update!(pet_hungry: @neopet.pet_hungry,
-    #                 pet_pic: @neopet.pet_pic,
-    #                 waiting_to_feed: @neopet.waiting_to_feed)
-    # # binding.pry
-    render :show
+    if @neopet.waiting_to_feed
+      flash[:notice] = "You put out the food, but #{@neopet.pet_name} doesn't seem to be hungry right now."
+    end
+    redirect_to neopet_path(params[:neopet_id])
+  end
+
+  def battle
+    @neopet = Neopet.find(params[:neopet_id])
+    @neopet.fight
+    render :battle
   end
 
   def destroy

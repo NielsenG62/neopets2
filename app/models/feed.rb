@@ -41,9 +41,9 @@ module Feed
 
   def eat
     scheduler = Rufus::Scheduler.new
-    self.update_attributes(pet_hungry: false)
-    self.update_attributes(current_hp_stat: self.hp_stat)
-    self.update_attributes(pet_pic: "neopets/#{self.pet_pic.delete("^0-9")}.png")
+    self.update_attributes(pet_hungry: false,
+                           current_hp_stat: self.hp_stat,
+                           pet_pic: "neopets/#{self.pet_pic.delete("^0-9")}.png")
     scheduler.in '10s', overlap: false do                                   
       self.update_attributes(pet_pic: "neopets_sad/#{self.pet_pic.delete("^0-9")}.png")
       if self.waiting_to_feed == true
