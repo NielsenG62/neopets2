@@ -1,29 +1,27 @@
-<div id="battle-page" class="container">
+<div id="battle-page3" class="container">
   <div class="row" id="top">
     <div class="col-4">
-        <div class="battle2-bg">
-          <%= image_tag "#{@neopet.pet_pic}", id: 'pet-battle', class: 'overlay-img' %>
-          <p class="battle-info"><%= "#{@neopet.pet_name}" %></p>
-        </div>
+      <div class="battle2-bg">
+        <%= image_tag "#{@neopet.pet_pic}", id: 'pet-battle', class: 'overlay-img' %>
+        <p class="battle-info"><%= "#{@neopet.pet_name}" %> <%= button_to "lets end this",neopet_screen4_path(params[:neopet_id]), type: "button", class: "btn btn-light", method: 'get' %></p>
+      </div>
     </div>
 
     <div class="col-4">
     <br>
-    <div class="battle-text">
-    <br>
-    <p>the <span id= "red">Terrorists</span> think theyve won</p>
-    <p>but <span class="pet"><%= "#{@neopet.pet_name}" %></span> has brought some frinds with him</p>
-    <p><span id= "green">SEAL TEAM TWIX</span>!</p>
-    <p><span id= "green">NeoCity's</span>'s premiere candybar themed anti terrorism unit!</p>
-    <%= button_to "lets end this",neopet_screen4_path(params[:neopet_id]), type: "button", class: "btn btn-light", method: 'post' %>
-    <%= button_to "lets negotiate", neopet_screen4_path(params[:neopet_id]), type: "button", class: "btn btn-light", method: 'post' %>
-    </div>
+      <div class="battle-text">
+        <br>
+        <p>the <span class= "red">Terrorists</span> think they've won</p>
+        <p>but <span class="pet"><%= "#{@neopet.pet_name}" %></span> has brought some frinds with him</p>
+        <p><span class= "green">SEAL TEAM TWIX</span>!</p>
+        <p><span class= "green">NeoCity's</span> premiere candybar themed anti-terrorism unit!</p>
+        <p>these guys are specially trained to deal with <span class="red">PUNKS</span> like this</p>
+      </div>
     </div>
 
     <div class="col-4">
       <img id= "enemy" src= "https://png2.cleanpng.com/sh/217cf98db94c176389371324b097362b/L0KzQYm3VMI1N5x7iZH0aYP2gLBuTfl0dJJygdU2dHX1grF5igNuNaRqiOZubXLogn64Ub1ifKVme918LYTogsP2kr02aZVqfqlrN3K4Q4fsVr43P2o9SacEMkG4QoW8VsE5PGg8TKQ8LoDxd1==/kisspng-islamic-terrorism-september-11-attacks-terror-5adef7b7b536e6.6798159215245618477423.png">
-    <p class="battle-info">Bad Guy</p>
-    
+      <p class="battle-info">Bad Guy <%= button_to "lets negotiate", neopet_screen4_path(params[:neopet_id]), type: "button", class: "btn btn-light", method: 'get' %></p>
     </div>
   </div>
 </div>

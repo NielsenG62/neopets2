@@ -42,10 +42,12 @@
           <br>
       </div>
       <% else %>
-      <br>
+ <br>
       <%= button_to "#{@neopet.pet_name} has died", neopet_path(@neopet), class: 'btn btn-light', :method => 'delete' %>
         <img id="headstone" class="overlay-img" src='https://png2.cleanpng.com/sh/f8d41d89ba643d11df0fe3419e512393/L0KzQYm3U8I5N5D7j5H0aYP2gLBuTfdzaadqRdVqcoTyf7A0hQJif5pzf59xZXHng8X2jvUua5ZyfeZucomwRbLpg8A4aWM3UacANkSxSYi9WMM2P2k2TaQ7Mke1QYe5UcY6O191htk=/kisspng-grave-cartoon-drawing-headstone-cemetery-5abc07a2295564.9768357815222721621693.png'>
       <% end %> 
+      <br>
+       <br>
     </div>
     
 
@@ -53,8 +55,10 @@
       <div class="col-hunger">
         <ul>
       <% if current_user && @neopet && @neopet.current_hp_stat > 0 %>
-        <% if @neopet.pet_hungry %>
+        <% if @neopet.current_hp_stat < 5 %>
           <li><%= "#{@neopet.pet_name} is "%><span class="pulsate"><span class="hungry"> hungry </li>
+        <% elsif @neopet.current_hp_stat < @neopet.hp_stat%>
+          <li><%= "#{@neopet.pet_name} is "%><span class="hungry"> hungry </li>
         <% else %>
           <li><%= "#{@neopet.pet_name} is "%><span class="full"> full</span></li>
         <% end %>

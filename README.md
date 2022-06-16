@@ -33,10 +33,11 @@
 * Open your browser and navigate to http://localhost:3000/
 * Sign up to become a registered user to navigate the site.
 * You can now navigate the site
+* Once you generate your pet you will need to feed them as their current health will drop as long as they are hungry.
 
 ## Known Bugs
 
-* No known bugs at this time
+* Began working on an inventory system but have not yet got it fully implemented
 
 ## License 
 

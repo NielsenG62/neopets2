@@ -39,6 +39,17 @@ class BattlesController < ApplicationController
     render :screen3
   end
 
+  def screen4
+    @neopet = Neopet.find(params[:neopet_id])
+    render :screen4
+  end
+
+  def screenS2
+    @neopet = Neopet.find(params[:neopet_id])
+    render :screenS2
+  end
+
+
   private
   def neopet_params
     params.require(:neopet).permit(:pet_name, :user_id)

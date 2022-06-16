@@ -34,7 +34,7 @@ module Neopets
     config.after_initialize do
       scheduler = Rufus::Scheduler.new
       scheduler.every '10s' do 
-        Neopet.connection.execute("UPDATE neopets SET current_hp_stat = current_hp_stat -1 WHERE current_hp_stat >= 0;")
+        Neopet.connection.execute("UPDATE neopets SET current_hp_stat = current_hp_stat -1 WHERE pet_hungry = true AND current_hp_stat >= 0;")
       end
     end
   end

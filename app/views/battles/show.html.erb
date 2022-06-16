@@ -1,30 +1,28 @@
-<div id="battle-page" class="container">
+<div id="battle-pages" class="container">
   <div class="row" id="top">
     <div class="col-4">
         <div class="couch-bg">
           <%= image_tag "#{@neopet.pet_pic}", id: 'pet-battle', class: 'overlay-img' %>
-          <p class="battle-info"><%= "#{@neopet.pet_name}" %></p>
+          <p class="battle-info"><%= "#{@neopet.pet_name}" %><%= button_to "answer the radio", neopet_screenS2_path(params[:neopet_id]), type: "button", class: "btn btn-light", method: 'get' %>
         </div>
      
     </div>
 
     <div class="col-4">
     <br>
-    <div class="battle-text">
-
-    <p><span class="pet"><%= "#{@neopet.pet_name}" %></span> is relaxing in the <span class ="green">NeoPets headquarters</span> watching their favorate tv show "burn notice"</p>
-    <p>a beep and hum comes from the <span class ="green">NeoPets secure radio network</span></p>
-    <p>it's the local police force and they're in need of <span class="pet"><%= "#{@neopet.pet_name}" %>'s</span> help!</p>
-    <p><span id= "red">TERRORISTS</span> have taken hostages in <span class ="green">Nagatomi plaza</span>!</p>
-    <p>"Please <span class="pet"><%= "#{@neopet.pet_name}" %></span> we're scared and need your help!"</p>
-    <%= button_to "send #{@neopet.pet_name} to help the police", neopet_screen1_path(params[:neopet_id]), type: "button", class: "btn btn-light", method: 'get' %>
-    <%= button_to "ACAB", neopet_screen1_path(params[:neopet_id]), type: "button", class: "btn btn-light", method: 'get' %>
-    </div>
+      <div class="battle-text">
+        <br>
+        <p><span class="pet"><%= "#{@neopet.pet_name}" %></span> is relaxing in the <span class ="green">NeoPets headquarters</span> watching their favorate tv show "burn notice"</p>
+        <p>a *beep* and *hum* comes from the <span class ="green">NeoPets secure radio network</span></p>
+        <br>
+      </div>
     </div>
 
     <div class="col-4">
-      <img id= "enemy" src= "https://png2.cleanpng.com/sh/57f5427eae24713f1f53dbf536902c02/L0KzQYm3UsAzN6dxiZH0aYP2gLBuTgBwdJpofZ94Znbsc7b5TfNieqV0h9C2cIXlfLrqTgNma6Z3geZELXL4grbolb13bZR5hAQ2c4Doc7rojL1xd51ue9c2cHnmhMb5hgMuPZI8TaIEOUTlRYO6V8YvP2c6UKMANUW0RYKAVsE6PmE5T6Y7LoDxd1==/kisspng-police-officer-cartoon-public-security-bureau-vector-special-police-pictures-5a750994b52376.765815551517619604742.png">
-    <p class="battle-info">Coward cop</p>
+      <img id= "radio" src= "https://png2.cleanpng.com/sh/f54e9e155e6fa6ce95e93e2727946839/L0KzQYm3UsE5N6R1j5H0aYP2gLBuTgJibJp0RdV1aYCwccP7TgZqdqVmf9c2cnHnebE0VfE5QWo5TNg9OUPldoi1WMM4O2I8SKo6NUG7SYe8WMM6O191htk=/kisspng-radio-clip-art-vintage-radio-5a89944f493bf7.8373170815189658393.png">
+      <div class="battle-info">
+        <p>Secure Radio Network</p>
+      </div>
     </div>
   </div>
 </div>
