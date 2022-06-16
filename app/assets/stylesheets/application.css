@@ -100,6 +100,28 @@
 }
 .battle-bg {
   text-align: center;
+  background-image: url("https://png2.cleanpng.com/sh/fbd4bdfe720726be2bb6a891d2898562/L0KzQYm3VcI2N5ZmepH0aYP2gLBuTfdzaZ9pReZxZXb3PbL8lP8ue5JzRdN3ZILoccS0hCJidpUyjNpuZoSwccb7j713NZQyiNH1aXPoPbTokwMuPZM1UKk5Zka8SIi8U8cvPWk9UKYCOES0RYOAUsc6QGc3TqQ9NT7zfri=/kisspng-grand-theft-auto-san-andreas-grand-theft-auto-v-c-police-cars-5b0870f6987537.5888478415272798626245.png");
+  background-position: center;
+  background-repeat:no-repeat; 
+  background-size: 420px, 420px;
+}
+.couch-bg {
+  text-align: center;
+  background-image: url("https://png2.cleanpng.com/sh/ed17402ce4c23fef73f63c2ca1a5996a/L0KzQYm3U8A2N5Zqj5H0aYP2gLBuTfxwfpZ4fdN9LXLvhba0gB92a5kyet5AZT3pcbP5ifMue5DreZ8AYUnnRrPtUMJmbWRpSZC5MkK2QYSAWME2OmE3Tqg7MkS0SYO4TwBvbz==/kisspng-loveseat-blue-couch-blue-fabric-sofa-5a9d6bf02ee3d1.0223137815202662241921.png");
+  background-position: center;
+  background-repeat:no-repeat; 
+  background-size: 420px, 420px;
+}
+.battle1-bg {
+  text-align: center;
+  background-image: url("https://png2.cleanpng.com/sh/ebee94642a99401b3d3e004d68102a26/L0KzQYi4UsE3N5NqTpGAYUO4Qre8gBE5a5drT5C7MUC3SYq7VsE2OWQ5S6YEN0K5SYK8TwBvbz==/5a352f5ca8cff7.2104994615134349726915.png");
+  background-position: center;
+  background-repeat:no-repeat; 
+  background-size: 420px, 420px;
+}
+
+.battle2-bg {
+  text-align: center;
   background-image: url("https://png2.cleanpng.com/sh/5aa61620cf643f69d96756b8473579d4/L0KzQYm3VcI1N5D6ipH0aYP2gLBuTfNwfZ95feQ2c4T1ebzsTgNwfaNofZ9rYYT3fLbtifVtbF45RdV4dX73dcO0kCRzcZwye9HAboTogn77hgJzd6Nui982NXKzRrTshsI4bGk4Uas3OEG4QYm8UMMyPWM8Sak7OEWzRYK7Ub5xdpg=/kisspng-counter-strike-source-battlefield-4-counter-strik-counter-terrorism-5b06cef27d8399.8151850315271728505141.png");
   background-position: center;
   background-repeat:no-repeat; 
@@ -108,6 +130,9 @@
 
 
 
+#green{
+color: green;
+}
 
 #pet2  {
   height: 400px;
@@ -189,7 +214,7 @@
   transform: rotateY(180deg);
 }
 
-#widow {
+#building {
   height: 400px;
   width: 400px;
   display: absolute;
@@ -324,4 +349,20 @@ font-size: large;
   -webkit-text-stroke: 1px white;
   letter-spacing: 3px;
   font-size: 32px;
+}
+.battle-text {
+  color: black;
+  -webkit-text-stroke: 1px white;
+  letter-spacing: 3px;
+  font-size: 16px;
+  margin-top: -10px;
+}
+
+#red {
+  color: red;
+}
+
+.pet {
+  font-size: larger;
+  font-weight: bolder;
 }

@@ -1,0 +1,35 @@
+<div id="battle-page" class="container">
+  <div class="row" id="top">
+    <div class="col-4">
+        <div class="battle1-bg">
+          <%= image_tag "#{@neopet.pet_pic}", id: 'pet-battle', class: 'overlay-img' %>
+          <p class="battle-info"><%= "#{@neopet.pet_name}" %></p>
+        </div>
+    </div>
+
+    <div class="col-4">
+    <br>
+   
+    <div class="battle-text">
+    <br>
+    <p>no need for backup! <span class="pet"><%= "#{@neopet.pet_name}" %></span> bursts through the door.</p>
+    <p><span id="green">hostages</span> are tied up around the lobby. beaten, but alive...for now</p>
+    <p>a crash from across the room and <span class="pet"><%= "#{@neopet.pet_name}" %></span> is face to face with a <span id= "red">Terrorist</span>!</p>
+    <p>"you'll never take us alive!" the <span id= "red">Terrorist</span> yells</p>
+
+
+    </div>
+    <%= button_to "thats the plan", neopet_screen3_path(params[:neopet_id]), type: "button", class: "btn btn-light", method: 'get' %>
+     <%= button_to "lets negotiate", neopet_screen3_path(params[:neopet_id]), type: "button", class: "btn btn-light", method: 'get' %>
+    </div>
+
+    <div class="col-4">
+    <% if @neopet.fight == "lose" || "" %>
+      <img id= "enemy" src= "https://png2.cleanpng.com/sh/217cf98db94c176389371324b097362b/L0KzQYm3VMI1N5x7iZH0aYP2gLBuTfl0dJJygdU2dHX1grF5igNuNaRqiOZubXLogn64Ub1ifKVme918LYTogsP2kr02aZVqfqlrN3K4Q4fsVr43P2o9SacEMkG4QoW8VsE5PGg8TKQ8LoDxd1==/kisspng-islamic-terrorism-september-11-attacks-terror-5adef7b7b536e6.6798159215245618477423.png">
+    <p class="battle-info">Bad Guy</p>
+    <% else %>
+      <img id= "game-over" src= "https://png2.cleanpng.com/sh/84f3d4ef65bf7c42121722dc486cbb14/L0KzQYm3U8IxN5t0iZH0aYP2gLBuTgdifJZ3e9H1b4KwgLLwjwRqdpgyhARqbnfoPbPolQRtbV51eeR0LYDkebB7gvFtdF50itN3Z3Wwg8HzggQueJ9sRdt2YXfoPYbogsFiPGM5S6o6YkO7PoeAVMQ6Omk4Sac7MUW8QYS6UsIzQWkziNDw/kisspng-watercolor-painting-orange-battle-park-paintball-orange-splat-png-image-5ab1a424381b38.6744928315215913322298.png">
+   <% end %>
+    </div>
+  </div>
+</div>

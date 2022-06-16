@@ -1,0 +1,24 @@
+<div id="battle-page" class="container">
+  <div class="row" id="top">
+    <div class="col-4">
+        <div class="battle1-bg">
+          <%= image_tag "#{@neopet.pet_pic}", id: 'pet-battle', class: 'overlay-img' %>
+          <p class="battle-info"><%= "#{@neopet.pet_name}" %></p>
+        </div>
+    </div>
+
+    <div class="col-4">
+    <br>
+    <div class="battle-info">
+    <br>
+    <p><%= "#{@neopet.pet_name}" %> and <span id= "green">SEAL TEAM TWIX</span> dont negotiate with <span id= "red">Terrorists</span> </p>
+
+    <%= button_to "Head Home", home_path(params[:neopet_id]), type: "button", class: "btn btn-light", method: 'post' %>
+    </div>
+    </div>
+
+    <div class="col-4">
+    <img class= "battle-bg" src="https://png2.cleanpng.com/sh/b343d156036f95afd00df583b82a6975/L0KzQYm3UsE">
+    </div>
+  </div>
+</div>

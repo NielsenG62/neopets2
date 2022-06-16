@@ -11,6 +11,7 @@ require "action_mailer/railtie"
 require "action_view/railtie"
 require "action_cable/engine"
 require "sprockets/railtie"
+require 'rufus-scheduler'
 # require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
@@ -29,5 +30,14 @@ module Neopets
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    config.after_initialize do
+      scheduler = Rufus::Scheduler.new
+      scheduler.every '10s' do 
+        Neopet.connection.execute("UPDATE neopets SET current_hp_stat = current_hp_stat -1 WHERE current_hp_stat >= 0;")
+      end
+    end
   end
 end
+
+

@@ -1,0 +1,28 @@
+<div id="battle-page" class="container">
+  <div class="row" id="top">
+    <div class="col-4">
+        <div class="battle-bg">
+          <%= image_tag "#{@neopet.pet_pic}", id: 'pet-battle', class: 'overlay-img' %>
+          <p class="battle-info"><%= "#{@neopet.pet_name}" %></p>
+        </div>
+    </div>
+    <div class="col-4">
+    <div class="battle-text">
+    <br>
+    <p><span id= "red">Terrorists</span> have taken over a commercial building in downtown <span id ="green">NeoCity</span></p>
+    <p><span class="pet"><%= "#{@neopet.pet_name}" %></span> approaches the building with the swagger of a high school football star</p>
+    <p>A beat cop lays in cover behind a bullet ridden police car</p>
+    <p> "you're not going in there" he says"</p>
+    <p><span class="pet"><%= "#{@neopet.pet_name}" %></span> says nothing</p>
+    <%= button_to "have #{@neopet.pet_name} enter the building", neopet_screen2_path(params[:neopet_id]), type: "button", class: "btn btn-light", method: 'get' %>
+    <%= button_to "have #{@neopet.pet_name} wait for backup", neopet_screen2_path(params[:neopet_id]), type: "button", class: "btn btn-light", method: 'get' %>
+    </div>
+    </div>
+
+    <div class="col-4">
+      <img id= "building" src= "https://png2.cleanpng.com/sh/d01320466fb119fe386f0a86a73fdd88/L0KzQYm3V8ExN5t3iZH0aYP2gLBuTfJ2cZ1pgdDwLYLyibLzlQkubqNqfZ9sYYL3f7F1Tf1mbJpoed42b3bpebTsTcVjPGY3S9c5Mke4RbK9TsY6PWUAUaY7MUW2QYO8V8gzPGI7SaM3cH7q/kisspng-building-royalty-free-cartoon-medical-office-5b4523e02755a6.6954994215312578241611.png">
+    <p class="battle-info">nagitomi plaza</p>
+
+    </div>
+  </div>
+</div>

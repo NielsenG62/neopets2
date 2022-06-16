@@ -1,34 +1,30 @@
 <div id="battle-page" class="container">
   <div class="row" id="top">
     <div class="col-4">
-    
-      <% if current_user && @neopet && @fight_results == "win" || ""  %>
-  
-        <div class="battle-bg">
+        <div class="couch-bg">
           <%= image_tag "#{@neopet.pet_pic}", id: 'pet-battle', class: 'overlay-img' %>
           <p class="battle-info"><%= "#{@neopet.pet_name}" %></p>
         </div>
-      <% else %>
-        <img id= "game-over" src= "https://png2.cleanpng.com/sh/84f3d4ef65bf7c42121722dc486cbb14/L0KzQYm3U8IxN5t0iZH0aYP2gLBuTgdifJZ3e9H1b4KwgLLwjwRqdpgyhARqbnfoPbPolQRtbV51eeR0LYDkebB7gvFtdF50itN3Z3Wwg8HzggQueJ9sRdt2YXfoPYbogsFiPGM5S6o6YkO7PoeAVMQ6Omk4Sac7MUW8QYS6UsIzQWkziNDw/kisspng-watercolor-painting-orange-battle-park-paintball-orange-splat-png-image-5ab1a424381b38.6744928315215913322298.png">
-        <%= button_to "#{@neopet.pet_name} has died", neopet_path(@neopet), class: 'btn btn-light', :method => 'delete' %>
-      <% end %> 
+     
     </div>
 
     <div class="col-4">
     <br>
-    <%= button_to "have #{@neopet.pet_name} fight the terrorist", neopet_fight_path(params[:neopet_id]), type: "button", class: "btn btn-light", method: 'post' %>
-    <div class="battle-info">
-    <br><%= "HP ~ #{@neopet.current_hp_stat}"%>
+    <div class="battle-text">
+
+    <p><span class="pet"><%= "#{@neopet.pet_name}" %></span> is relaxing in the <span class ="green">NeoPets headquarters</span> watching their favorate tv show "burn notice"</p>
+    <p>a beep and hum comes from the <span class ="green">NeoPets secure radio network</span></p>
+    <p>it's the local police force and they're in need of <span class="pet"><%= "#{@neopet.pet_name}" %>'s</span> help!</p>
+    <p><span id= "red">TERRORISTS</span> have taken hostages in <span class ="green">Nagatomi plaza</span>!</p>
+    <p>"Please <span class="pet"><%= "#{@neopet.pet_name}" %></span> we're scared and need your help!"</p>
+    <%= button_to "send #{@neopet.pet_name} to help the police", neopet_screen1_path(params[:neopet_id]), type: "button", class: "btn btn-light", method: 'get' %>
+    <%= button_to "ACAB", neopet_screen1_path(params[:neopet_id]), type: "button", class: "btn btn-light", method: 'get' %>
     </div>
     </div>
 
     <div class="col-4">
-    <% if @neopet.fight == "lose" || "" %>
-      <img id= "enemy" src= "https://png2.cleanpng.com/sh/217cf98db94c176389371324b097362b/L0KzQYm3VMI1N5x7iZH0aYP2gLBuTfl0dJJygdU2dHX1grF5igNuNaRqiOZubXLogn64Ub1ifKVme918LYTogsP2kr02aZVqfqlrN3K4Q4fsVr43P2o9SacEMkG4QoW8VsE5PGg8TKQ8LoDxd1==/kisspng-islamic-terrorism-september-11-attacks-terror-5adef7b7b536e6.6798159215245618477423.png">
-    <p class="battle-info">Bad Guy</p>
-    <% else %>
-      <img id= "game-over" src= "https://png2.cleanpng.com/sh/84f3d4ef65bf7c42121722dc486cbb14/L0KzQYm3U8IxN5t0iZH0aYP2gLBuTgdifJZ3e9H1b4KwgLLwjwRqdpgyhARqbnfoPbPolQRtbV51eeR0LYDkebB7gvFtdF50itN3Z3Wwg8HzggQueJ9sRdt2YXfoPYbogsFiPGM5S6o6YkO7PoeAVMQ6Omk4Sac7MUW8QYS6UsIzQWkziNDw/kisspng-watercolor-painting-orange-battle-park-paintball-orange-splat-png-image-5ab1a424381b38.6744928315215913322298.png">
-   <% end %>
+      <img id= "enemy" src= "https://png2.cleanpng.com/sh/57f5427eae24713f1f53dbf536902c02/L0KzQYm3UsAzN6dxiZH0aYP2gLBuTgBwdJpofZ94Znbsc7b5TfNieqV0h9C2cIXlfLrqTgNma6Z3geZELXL4grbolb13bZR5hAQ2c4Doc7rojL1xd51ue9c2cHnmhMb5hgMuPZI8TaIEOUTlRYO6V8YvP2c6UKMANUW0RYKAVsE6PmE5T6Y7LoDxd1==/kisspng-police-officer-cartoon-public-security-bureau-vector-special-police-pictures-5a750994b52376.765815551517619604742.png">
+    <p class="battle-info">Coward cop</p>
     </div>
   </div>
 </div>
