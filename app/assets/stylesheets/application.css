@@ -45,7 +45,7 @@
 
 .home:hover {
   transition: all 5s;
-  transform: scale(1.3);
+  transform: scale(1.1);
   -webkit-text-stroke: 1px rgb(214, 255, 91);
 
 }
