@@ -1,0 +1,27 @@
+<div id="battle-page2" class="container">
+  <div class="row" id="top">
+    <div class="col-4">
+      <div class="battle1-bg">
+        <%= image_tag "#{@neopet.pet_pic}", id: 'pet-battle', class: 'overlay-img' %>
+        <p class="battle-info"><%= "#{@neopet.pet_name}" %> <%= button_to "thats the plan", neopet_screen3_path(params[:neopet_id]), type: "button", class: "btn btn-light", method: 'get' %></p>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <br>
+      <div class="battle-text">
+        <br>
+        <p>no time for backup! <span class="pet"><%= "#{@neopet.pet_name}" %></span> bursts through the door.</p>
+        <p><span class="green">hostages</span> are tied up around the lobby. beaten, but alive...for now</p>
+        <p>a crash from across the room and <span class="pet"><%= "#{@neopet.pet_name}" %></span> is face to face with a <span class= "red">Terrorist</span>!</p>
+        <p>"you'll never take us alive!" the <span class= "red">Terrorist</span> yells</p>
+      </div>
+      <br> 
+    </div>
+
+    <div class="col-4">
+      <img id= "enemy" src= "https://png2.cleanpng.com/sh/217cf98db94c176389371324b097362b/L0KzQYm3VMI1N5x7iZH0aYP2gLBuTfl0dJJygdU2dHX1grF5igNuNaRqiOZubXLogn64Ub1ifKVme918LYTogsP2kr02aZVqfqlrN3K4Q4fsVr43P2o9SacEMkG4QoW8VsE5PGg8TKQ8LoDxd1==/kisspng-islamic-terrorism-september-11-attacks-terror-5adef7b7b536e6.6798159215245618477423.png">
+      <p class="battle-info">Bad Guy<%= button_to "lets negotiate", neopet_screen3_path(params[:neopet_id]), type: "button", class: "btn btn-light", method: 'get' %></p>
+    </div>
+  </div>
+</div>

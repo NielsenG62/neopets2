@@ -45,7 +45,7 @@
 
 .home:hover {
   transition: all 5s;
-  transform: scale(1.3);
+  transform: scale(1.1);
   -webkit-text-stroke: 1px rgb(214, 255, 91);
 
 }
@@ -69,8 +69,6 @@
   
   height: 400px;
   width: 400px;
-  /* display: absolute; */
-
   margin-left: auto;
   margin-right: auto;
   transition: all 3s;
@@ -85,11 +83,10 @@
   display: absolute;
   margin-left: auto;
   margin-right: auto;
-  transition: all 3s;
-  border-bottom:  solid black;
-  border-color: black;
-  border-width: 10px;
+  /* margin-bottom: 75px; */
+  padding-bottom: 10px;
 }
+
 #pet-battle  {
   height: 400px;
   width: 400px;
@@ -98,7 +95,40 @@
   margin-right: auto;
   transition: all 3s;
 }
+
 .battle-bg {
+  text-align: center;
+  background-image: url("https://png2.cleanpng.com/sh/fbd4bdfe720726be2bb6a891d2898562/L0KzQYm3VcI2N5ZmepH0aYP2gLBuTfdzaZ9pReZxZXb3PbL8lP8ue5JzRdN3ZILoccS0hCJidpUyjNpuZoSwccb7j713NZQyiNH1aXPoPbTokwMuPZM1UKk5Zka8SIi8U8cvPWk9UKYCOES0RYOAUsc6QGc3TqQ9NT7zfri=/kisspng-grand-theft-auto-san-andreas-grand-theft-auto-v-c-police-cars-5b0870f6987537.5888478415272798626245.png");
+  background-position: center;
+  background-repeat:no-repeat; 
+  background-size: 420px, 420px;
+}
+
+.couch-bg {
+  text-align: center;
+  background-image: url("https://png2.cleanpng.com/sh/ed17402ce4c23fef73f63c2ca1a5996a/L0KzQYm3U8A2N5Zqj5H0aYP2gLBuTfxwfpZ4fdN9LXLvhba0gB92a5kyet5AZT3pcbP5ifMue5DreZ8AYUnnRrPtUMJmbWRpSZC5MkK2QYSAWME2OmE3Tqg7MkS0SYO4TwBvbz==/kisspng-loveseat-blue-couch-blue-fabric-sofa-5a9d6bf02ee3d1.0223137815202662241921.png");
+  background-position: center;
+  background-repeat:no-repeat; 
+  background-size: 420px, 420px;
+}
+
+.battle1-bg {
+  text-align: center;
+  background-image: url("https://png2.cleanpng.com/sh/ebee94642a99401b3d3e004d68102a26/L0KzQYi4UsE3N5NqTpGAYUO4Qre8gBE5a5drT5C7MUC3SYq7VsE2OWQ5S6YEN0K5SYK8TwBvbz==/5a352f5ca8cff7.2104994615134349726915.png");
+  background-position: center;
+  background-repeat:no-repeat; 
+  background-size: 420px, 420px;
+}
+.battle4-bg {
+  text-align: center;
+  background-image: url("https://png2.cleanpng.com/sh/eb9081920267417524606c0695c09e6b/L0KzQYi4UcI4N2lpfJGAYUHmSLftWcI6bWE4UJC5OEa0SYiBVsE2OWI9SqM8MEW0R4K8TwBvbz==/5a1c8ff929e038.0861978615118213051715.png");
+  background-position: center;
+  background-repeat:no-repeat; 
+  background-size: 420px, 420px;
+}
+
+
+.battle2-bg {
   text-align: center;
   background-image: url("https://png2.cleanpng.com/sh/5aa61620cf643f69d96756b8473579d4/L0KzQYm3VcI1N5D6ipH0aYP2gLBuTfNwfZ95feQ2c4T1ebzsTgNwfaNofZ9rYYT3fLbtifVtbF45RdV4dX73dcO0kCRzcZwye9HAboTogn77hgJzd6Nui982NXKzRrTshsI4bGk4Uas3OEG4QYm8UMMyPWM8Sak7OEWzRYK7Ub5xdpg=/kisspng-counter-strike-source-battlefield-4-counter-strik-counter-terrorism-5b06cef27d8399.8151850315271728505141.png");
   background-position: center;
@@ -106,8 +136,9 @@
   background-size: 420px, 420px;
 }
 
-
-
+.green{
+color: green;
+}
 
 #pet2  {
   height: 400px;
@@ -117,6 +148,7 @@
   margin-right: auto;
   transition: all 3s;
 }
+
 #pet3  {
   height: 400px;
   width: 400px;
@@ -158,7 +190,7 @@
   border-color: black;
   border-width: 3px 3px 5px 5px;
   border-radius:4% 95% 6% 95%/95% 4% 92% 5%;
-  transform: rotate(-.5deg);
+  transform: rotate(-.6deg);
   box-shadow: 20px 20px rgba(0,0,0,.15);
 }
 
@@ -170,10 +202,24 @@
   background-image: url(https://i.imgur.com/B8fJ5ua.jpeg);
 }
 
-#battle-page{
-  background-image: url(https://cdn.wallpapersafari.com/98/44/l25orQ.png);
+#battle-pages{
+  background-image: url(https://preview.redd.it/iqyvfukxq2151.png?width=960&crop=smart&auto=webp&s=b9ea99151cb09b26c854d07026b006840bd2ee59);
+}
+#battle-page1{
+  background-image: url(https://img.freepik.com/free-vector/city-crossroad-night-transport-intersection_107791-2398.jpg?t=st=1655399605~exp=1655400205~hmac=0a636ab0a584c91960d1ff1145423e124054b02ae0a742cd961abfa5d0048516&w=2000);
 }
 
+#battle-page2{
+  background-image: url(https://doy2mn9upadnk.cloudfront.net/uploads/default/original/4X/0/d/9/0d957a371aedaf57d3cf7348085d9d4331977408.jpeg);
+}
+
+#battle-page3{
+  background-image: url(https://doy2mn9upadnk.cloudfront.net/uploads/default/original/4X/0/d/9/0d957a371aedaf57d3cf7348085d9d4331977408.jpeg);
+}
+
+#battle-page4{
+  background-image: url(https://cdn.wallpapersafari.com/98/44/l25orQ.png);
+}
 
 #death-page{
   background-image: url(https://www.jellyneo.net/images/plotimgs/forgotten_graveyard_sword.png);
@@ -189,7 +235,25 @@
   transform: rotateY(180deg);
 }
 
-#widow {
+#radio {
+  height: 395px;
+  width: 395px;
+  display: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  transform: rotateY(180deg);
+}
+
+.blood {
+  height: 400px;
+  width: 400px;
+  display: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  transform: rotateY(180deg);
+}
+
+#building {
   height: 400px;
   width: 400px;
   display: absolute;
@@ -256,7 +320,14 @@ font-size: large;
 
 .btn {
   border: solid black;
+  border: solid black;
+  border-color: black;
+  border-width: 3px 3px 5px 5px;
+  border-radius:4% 95% 6% 95%/95% 4% 92% 5%;
+  transform: rotate(-.6deg);
+  box-shadow: 10px 10px rgba(0,0,0,.15);
 }
+
 
 .btn:hover {
   transform: scale(1.1);
@@ -281,7 +352,7 @@ font-size: large;
 }
 
 .pulsate {
-  -webkit-animation: pulsate 3s ease-out;
+  -webkit-animation: pulsate 1s ease-out;
   -webkit-animation-iteration-count: infinite; 
   opacity: 0.5;
 }
@@ -324,4 +395,24 @@ font-size: large;
   -webkit-text-stroke: 1px white;
   letter-spacing: 3px;
   font-size: 32px;
+}
+.battle-text {
+  color: rgb(0, 0, 0);
+  -webkit-text-stroke: 1.1px white;
+  letter-spacing: 3px;
+  font-size: 19px;
+  margin-top: -10px;
+  background-image : url(https://png2.cleanpng.com/sh/11c98d3321911c2acdf36dfc2e8dc3ba/L0KzQYm3U8MyN6R4fZH0aYP2gLBuTgNxbZZogJ9rYXzvf7F1TgJwgZJxjOs2ZoLodX7qjB1qa15nh9H0LYDygH7okwQuPZJnfqQ8MkjnR4O3UcIvPmM2TqcCOEe0RYO5VMc2QGI7UKo6Mj7zfri=/kisspng-speech-balloon-royalty-free-comic-book-pop-art-5abf2328d72012.6216578715224758168812.png);
+  background-size: 400px 312px;
+  background-repeat: no-repeat;
+
+}
+
+.red {
+  color: red;
+}
+
+.pet {
+  font-size: larger;
+  font-weight: bolder;
 }

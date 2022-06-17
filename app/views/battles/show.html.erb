@@ -1,34 +1,28 @@
-<div id="battle-page" class="container">
+<div id="battle-pages" class="container">
   <div class="row" id="top">
     <div class="col-4">
-    
-      <% if current_user && @neopet && @fight_results == "win" || ""  %>
-  
-        <div class="battle-bg">
+        <div class="couch-bg">
           <%= image_tag "#{@neopet.pet_pic}", id: 'pet-battle', class: 'overlay-img' %>
-          <p class="battle-info"><%= "#{@neopet.pet_name}" %></p>
+          <p class="battle-info"><%= "#{@neopet.pet_name}" %><%= button_to "answer the radio", neopet_screenS2_path(params[:neopet_id]), type: "button", class: "btn btn-light", method: 'get' %>
         </div>
-      <% else %>
-        <img id= "game-over" src= "https://png2.cleanpng.com/sh/84f3d4ef65bf7c42121722dc486cbb14/L0KzQYm3U8IxN5t0iZH0aYP2gLBuTgdifJZ3e9H1b4KwgLLwjwRqdpgyhARqbnfoPbPolQRtbV51eeR0LYDkebB7gvFtdF50itN3Z3Wwg8HzggQueJ9sRdt2YXfoPYbogsFiPGM5S6o6YkO7PoeAVMQ6Omk4Sac7MUW8QYS6UsIzQWkziNDw/kisspng-watercolor-painting-orange-battle-park-paintball-orange-splat-png-image-5ab1a424381b38.6744928315215913322298.png">
-        <%= button_to "#{@neopet.pet_name} has died", neopet_path(@neopet), class: 'btn btn-light', :method => 'delete' %>
-      <% end %> 
+     
     </div>
 
     <div class="col-4">
     <br>
-    <%= button_to "have #{@neopet.pet_name} fight the terrorist", neopet_fight_path(params[:neopet_id]), type: "button", class: "btn btn-light", method: 'post' %>
-    <div class="battle-info">
-    <br><%= "HP ~ #{@neopet.current_hp_stat}"%>
-    </div>
+      <div class="battle-text">
+        <br>
+        <p><span class="pet"><%= "#{@neopet.pet_name}" %></span> is relaxing in the <span class ="green">NeoPets headquarters</span> watching their favorate tv show "burn notice"</p>
+        <p>a *beep* and *hum* comes from the <span class ="green">NeoPets secure radio network</span></p>
+        <br>
+      </div>
     </div>
 
     <div class="col-4">
-    <% if @neopet.fight == "lose" || "" %>
-      <img id= "enemy" src= "https://png2.cleanpng.com/sh/217cf98db94c176389371324b097362b/L0KzQYm3VMI1N5x7iZH0aYP2gLBuTfl0dJJygdU2dHX1grF5igNuNaRqiOZubXLogn64Ub1ifKVme918LYTogsP2kr02aZVqfqlrN3K4Q4fsVr43P2o9SacEMkG4QoW8VsE5PGg8TKQ8LoDxd1==/kisspng-islamic-terrorism-september-11-attacks-terror-5adef7b7b536e6.6798159215245618477423.png">
-    <p class="battle-info">Bad Guy</p>
-    <% else %>
-      <img id= "game-over" src= "https://png2.cleanpng.com/sh/84f3d4ef65bf7c42121722dc486cbb14/L0KzQYm3U8IxN5t0iZH0aYP2gLBuTgdifJZ3e9H1b4KwgLLwjwRqdpgyhARqbnfoPbPolQRtbV51eeR0LYDkebB7gvFtdF50itN3Z3Wwg8HzggQueJ9sRdt2YXfoPYbogsFiPGM5S6o6YkO7PoeAVMQ6Omk4Sac7MUW8QYS6UsIzQWkziNDw/kisspng-watercolor-painting-orange-battle-park-paintball-orange-splat-png-image-5ab1a424381b38.6744928315215913322298.png">
-   <% end %>
+      <img id= "radio" src= "https://png2.cleanpng.com/sh/f54e9e155e6fa6ce95e93e2727946839/L0KzQYm3UsE5N6R1j5H0aYP2gLBuTgJibJp0RdV1aYCwccP7TgZqdqVmf9c2cnHnebE0VfE5QWo5TNg9OUPldoi1WMM4O2I8SKo6NUG7SYe8WMM6O191htk=/kisspng-radio-clip-art-vintage-radio-5a89944f493bf7.8373170815189658393.png">
+      <div class="battle-info">
+        <p>Secure Radio Network</p>
+      </div>
     </div>
   </div>
 </div>

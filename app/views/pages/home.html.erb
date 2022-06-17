@@ -22,7 +22,7 @@
         <%= image_tag "#{current_user.neopets[1].pet_pic}", id: 'pet1', class: 'overlay-img' %>
         <%= button_to current_user.neopets[1].pet_name,  neopet_path(current_user.neopets[1].id), type: "button", class: "btn btn-light", :method => 'get'%>
       </div>         
-      <% else%>
+      <% else %>
         <div class="box">
           <img id="box-qm" class="overlay-img" src='https://png2.cleanpng.com/sh/fae3b0d0092d67fb540f481e65446bf4/L0KzQYm3U8I3N6p9iZH0aYP2gLBuTgF2baR5gdH3LX3kgry0hPlkbV51itd8ZX73ccXwjB4uaZ9uhdN9aXBxPbTzigAuaaN5ReNAZYP3ebF1TcViamlmUNUDOHO1SIWCTsI4Omk6T6oAMUW1QoG8UcI4OmY8TKM3cH7q/kisspng-question-mark-dice-presentation-animation-clip-art-question-5ab8a8c88c2849.2728578515220512725741.png'>
           <%= button_to "Add a pet", new_neopet_path(current_user), id: "pet-add", class: "btn btn-light", method: 'get' %>

@@ -1,0 +1,31 @@
+<div id="battle-pages" class="container">
+  <div class="row" id="top">
+    <div class="col-4">
+        <div class="couch-bg">
+          <%= image_tag "#{@neopet.pet_pic}", id: 'pet-battle', class: 'overlay-img' %>
+          <p class="battle-info"><%= "#{@neopet.pet_name}" %><%= button_to "send #{@neopet.pet_name} to help the police", neopet_screen1_path(params[:neopet_id]), type: "button", class: "btn btn-light", method: 'get' %></p>
+        </div>
+     
+    </div>
+
+    <div class="col-4">
+      <br>
+      <div class="battle-text">
+        <br>
+        <br>
+        <br>
+        <p>it's the local police force and they're in need of <span class="pet"><%= "#{@neopet.pet_name}" %>'s</span> help!</p>
+        <p>We have a hostage situation in downtown <span class ="green">NeoCity</span>!</p>
+        <p>"Please <span class="pet"><%= "#{@neopet.pet_name}" %></span> we're scared and need your help!"</p>
+        <br>
+        <br>
+        <br>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <img id= "enemy" src= "https://png2.cleanpng.com/sh/57f5427eae24713f1f53dbf536902c02/L0KzQYm3UsAzN6dxiZH0aYP2gLBuTgBwdJpofZ94Znbsc7b5TfNieqV0h9C2cIXlfLrqTgNma6Z3geZELXL4grbolb13bZR5hAQ2c4Doc7rojL1xd51ue9c2cHnmhMb5hgMuPZI8TaIEOUTlRYO6V8YvP2c6UKMANUW0RYKAVsE6PmE5T6Y7LoDxd1==/kisspng-police-officer-cartoon-public-security-bureau-vector-special-police-pictures-5a750994b52376.765815551517619604742.png">
+    <p class="battle-info">Coward cop<%= button_to "ACAB", neopet_screen1_path(params[:neopet_id]), type: "button", class: "btn btn-light", method: 'get' %></p></p>
+    </div>
+  </div>
+</div>
